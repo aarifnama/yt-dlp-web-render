@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: yt-dlp-web
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    repo: https://github.com/aarifnama/yt-dlp-web-render
+    branch: main
+    free: true
